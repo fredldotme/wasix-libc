@@ -81,9 +81,9 @@ int clone (int (*)(void *), void *, int, void *, ...);
 int unshare(int);
 int setns(int, int);
 
-void *memcpy(void *__restrict, const void *__restrict, size_t);
+void *memcpy(void *__restrict, const void *__restrict, size_t) __attribute__((__nothrow__, __leaf__, __nonnull__(1, 2)));;
 int memcmp(const void *, const void *, size_t);
-void *memset (void *, int, size_t);
+void *memset (void *, int, size_t) __attribute__((__nothrow__, __leaf__, __nonnull__(1)));
 void *calloc(size_t, size_t);
 void free(void *);
 

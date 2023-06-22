@@ -4,7 +4,7 @@
 #include "syscall.h"
 #endif
 
-int sigaltstack(const stack_t *restrict ss, stack_t *restrict old)
+int sigaltstack(const stack_t *__restrict ss, stack_t *__restrict old)
 {
 #ifdef __wasilibc_unmodified_upstream
 	if (ss) {
